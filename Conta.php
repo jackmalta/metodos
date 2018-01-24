@@ -14,7 +14,7 @@ class Conta
 
   function saca($valor)
   {
-    $this->saldo -= $valor;
+    $this->saldo += $valor;
   }
 
   function imprimeExtrato()

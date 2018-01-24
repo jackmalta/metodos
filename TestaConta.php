@@ -10,6 +10,7 @@
     $val = $argv[1];
     echo "Saldo Inicial: $conta->saldo".PHP_EOL;
     $conta->saca($val);
+    var_dump($argv);
 
     echo "Saldo Atual: $conta->saldo".PHP_EOL;
   }
@@ -19,10 +20,12 @@
     $conta->deposita($val);
 
     echo "Saldo Atual: $conta->saldo".PHP_EOL;
+    
   }elseif ($argv[1] == 1) {
     //imprimeExtrato
 
     $conta->imprimeExtrato();
+
   }elseif ($argv[1] == 2) {
     //consultaSaldoDisponivel
     $conta->consultaSaldoDisponivel();
