@@ -3,8 +3,33 @@
 
   $conta = new Conta();
 
-  echo "Saldo: $conta->saldo".PHP_EOL;
-  $conta->deposita(2500);
+  $argv;
 
-  echo "$conta->saldo".PHP_EOL;
+  //Saque
+  if ($argv[1] < 0) {
+    $val = $argv[1];
+    echo "Saldo Inicial: $conta->saldo".PHP_EOL;
+    $conta->saca($val);
+
+    echo "Saldo Atual: $conta->saldo".PHP_EOL;
+  }
+  elseif ($argv[1] > 10) {
+    $val = $argv[1];
+    echo "Saldo Inicial: $conta->saldo".PHP_EOL;
+    $conta->deposita($val);
+
+    echo "Saldo Atual: $conta->saldo".PHP_EOL;
+  }elseif ($argv[1] == 1) {
+    //imprimeExtrato
+
+    $conta->imprimeExtrato();
+  }elseif ($argv[1] == 2) {
+    //consultaSaldoDisponivel
+    $conta->consultaSaldoDisponivel();
+  }else echo "Valor inválido!";
+
+
+
+
+
  ?>
