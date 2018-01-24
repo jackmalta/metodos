@@ -4,6 +4,7 @@
 
   $funcionario = new Funcionarios();
 
-  $funcionario->consultaDados();
+  $funcionario->aumentaSalario(250);
+  echo "$funcionario->salario".PHP_EOL;
 
  ?>
